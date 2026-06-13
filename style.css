@@ -1,0 +1,378 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
+}
+
+.logo span{
+    color:#FFD700;
+    font-size:1.1rem;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#FFD700;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:url("images/hero.jpg") center center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:800px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    color:#FFD700;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.4rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#FFD700;
+    color:black;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px #FFD700;
+}
+
+/* GENERAL */
+
+section{
+    padding:100px 10%;
+}
+
+h2{
+    text-align:center;
+    color:#FFD700;
+    font-size:2.5rem;
+    margin-bottom:40px;
+}
+
+/* ABOUT */
+
+.about p{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
+    font-size:1.1rem;
+}
+
+/* FACILITIES */
+
+.facility-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#111;
+    border:1px solid #FFD700;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #FFD700;
+}
+
+/* MEMBERSHIP */
+
+.plan-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.plan{
+    background:#111;
+    border:1px solid #FFD700;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    position:relative;
+    transition:.4s;
+}
+
+.plan:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #FFD700;
+}
+
+.featured{
+    transform:scale(1.05);
+    box-shadow:0 0 30px #FFD700;
+}
+
+.elite{
+    border:2px solid #FFD700;
+    background:linear-gradient(
+        135deg,
+        #111,
+        #1d1d1d
+    );
+}
+
+.badge{
+    position:absolute;
+    top:15px;
+    right:15px;
+    background:#FFD700;
+    color:black;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.membership-prices{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin:25px 0;
+}
+
+.price-box{
+    background:#222;
+    padding:15px;
+    border-radius:15px;
+    width:120px;
+}
+
+.price-box span{
+    display:block;
+    color:#FFD700;
+    margin-bottom:10px;
+    font-weight:bold;
+}
+
+.price-box h4{
+    font-size:1.8rem;
+}
+
+.duo{
+    background:#FFD700;
+    color:black;
+}
+
+.duo span{
+    color:black;
+}
+
+.join-btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#FFD700;
+    color:black;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.join-btn:hover{
+    transform:scale(1.05);
+}
+
+/* GALLERY */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.4s;
+    cursor:pointer;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.map-container{
+    border:2px solid #FFD700;
+    border-radius:20px;
+    overflow:hidden;
+    margin-bottom:30px;
+}
+
+.address-box h3{
+    color:#FFD700;
+    margin-bottom:15px;
+}
+
+.address-box p{
+    line-height:1.8;
+}
+
+.map-btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#FFD700;
+    color:black;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:25px;
+    border-top:1px solid #333;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:10px;
+        padding:10px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    h2{
+        font-size:2rem;
+    }
+
+    .membership-prices{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .facility-grid{
+        grid-template-columns:1fr;
+    }
+
+    .plan-grid{
+        grid-template-columns:1fr;
+    }
+
+    .logo img{
+        width:45px;
+        height:45px;
+    }
+
+    .logo span{
+        font-size:14px;
+    }
+
+}
